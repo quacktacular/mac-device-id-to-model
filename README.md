@@ -5,7 +5,7 @@ A list of known Mac model identifiers, scraped from Apple Support, that you can 
 ```
 curl -s https://support-sp.apple.com/sp/product?cc=` echo $DEVICE_SERIAL | cut -c 9-` 
 ```
-This one doesn't work with Apple's (new serial number)[https://www.macrumors.com/2021/05/05/purple-iphone-12-randomized-serial-number/] format. They have not provided any alterntive.
+This one doesn't work with Apple's [new serial number](https://www.macrumors.com/2021/05/05/purple-iphone-12-randomized-serial-number/) format. They have not provided any alterntive.
 
 ```
 Read some random plist files!
