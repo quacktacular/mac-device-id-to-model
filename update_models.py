@@ -9,6 +9,7 @@ open(models_file_path, 'w').close()
 models_file = open(models_file_path, 'a')
 
 device_families = ["https://support.apple.com/en-ca/HT201634", # MacBook Pro
+	"https://support.apple.com/en-ca/HT201862", # MacBook Air
 	"https://support.apple.com/en-ca/HT201300", # iMac
 	"https://support.apple.com/en-ca/HT201894", # Mac mini
 	"https://support.apple.com/en-us/HT201608", # MacBook

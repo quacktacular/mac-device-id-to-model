@@ -24,6 +24,24 @@ iMac (27-inch, Late 2009)|iMac10,1
 iMac (21.5-inch, Late 2009)|iMac10,1
 iMac (24-inch, Early 2009)|iMac9,1
 iMac (20-inch, Early 2009)|iMac9,1
+MacBook Air (M1, 2020)|MacBookAir10,1
+MacBook Air (Retina, 13-inch, 2020)|MacBookAir9,1
+MacBook Air (Retina, 13-inch, 2019)|MacBookAir8,2
+MacBook Air (Retina, 13-inch, 2018)|MacBookAir8,1
+MacBook Air (13-inch, 2017)|MacBookAir7,2
+MacBook Air (13-inch, Early 2015)|MacBookAir7,2
+MacBook Air (11-inch, Early 2015)|MacBookAir7,1
+MacBook Air (13-inch, Early 2014)|MacBookAir6,2
+MacBook Air (11-inch, Early 2014)|MacBookAir6,1
+MacBook Air (13-inch, Mid 2013)|MacBookAir6,2
+MacBook Air (11-inch, Mid 2013)|MacBookAir6,1
+MacBook Air (13-inch, Mid 2012)|MacBookAir5,2
+MacBook Air (11-inch, Mid 2012)|MacBookAir5,1
+MacBook Air (13-inch, Mid 2011)|MacBookAir4,2
+MacBook Air (11-inch, Mid 2011)|MacBookAir4,1
+MacBook Air (13-inch, Late 2010)|MacBookAir3,2
+MacBook Air (11-inch, Late 2010)|MacBookAir3,1
+MacBook Air (Mid 2009)|MacBookAir2,1
 MacBook Pro (14-inch, 2021)|MacBookPro18,3 MacBookPro18,4
 MacBook Pro (16-inch, 2021)|MacBookPro18,1 MacBookPro18,2
 MacBook Pro (13-inch, M1, 2020)|MacBookPro17,1
