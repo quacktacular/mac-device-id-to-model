@@ -112,3 +112,5 @@ Mac Pro Server (Mid 2012)|MacPro5,1
 Mac Pro (Mid 2010)|MacPro5,1
 Mac Pro Server (Mid 2010)|MacPro5,1
 Mac Pro (Early 2009)|MacPro4,1
+Mac Studio (2022)|Mac13,1
+Mac Studio (2022)|Mac13,2

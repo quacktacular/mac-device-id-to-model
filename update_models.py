@@ -13,7 +13,8 @@ device_families = ["https://support.apple.com/en-ca/HT201634", # MacBook Pro
 	"https://support.apple.com/en-ca/HT201300", # iMac
 	"https://support.apple.com/en-ca/HT201894", # Mac mini
 	"https://support.apple.com/en-us/HT201608", # MacBook
-	"https://support.apple.com/en-us/HT202888" # Mac Pro
+	"https://support.apple.com/en-us/HT202888", # Mac Pro
+	"https://support.apple.com/en-ca/HT213073", # Mac Studio 
 ]
 for familyURL in device_families:
 	page = requests.get(familyURL)
