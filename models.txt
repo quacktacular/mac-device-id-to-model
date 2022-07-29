@@ -24,6 +24,7 @@ iMac (27-inch, Late 2009)|iMac10,1
 iMac (21.5-inch, Late 2009)|iMac10,1
 iMac (24-inch, Early 2009)|iMac9,1
 iMac (20-inch, Early 2009)|iMac9,1
+MacBook Air (M2, 2022)|Mac14,2
 MacBook Air (M1, 2020)|MacBookAir10,1
 MacBook Air (Retina, 13-inch, 2020)|MacBookAir9,1
 MacBook Air (Retina, 13-inch, 2019)|MacBookAir8,2
