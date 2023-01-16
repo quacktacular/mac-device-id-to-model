@@ -1,4 +1,5 @@
 import requests
+import re
 from bs4 import BeautifulSoup
 
 # Set our path to the text file
@@ -23,13 +24,22 @@ for familyURL in device_families:
 	for model in results:
 		model_name = str(model).replace('<strong>','').replace('</strong>','').replace('<br/>','').strip()
 		section = model.find_parent('p')
+    # Model info
 		model_identifers = ""
 		for line in section:
-			if "Model" in line:
-					model_identifers = str(line).replace("Model Identifier:",'').replace(", ",' ').replace(", ",' ').strip()
-					break
-		print(model_name + "|" + model_identifers)
-		models_file.write(model_name + "|" + model_identifers + "\n")
+				if "Model" in line:
+						model_identifers = str(line).replace("Model Identifier:",'').replace(", ",' ').replace(", ",' ').replace(";",'').strip()
+						break
+    # Year info
+		year_string = None
+		for string in section.strings:
+				match = re.search(r'\b\d{4}\b', string)
+				if match:
+						year_string = match.group() 
+    # Print the data
+		line = model_name + "|" + model_identifers + "|" + year_string
+		print(line)
+		models_file.write(line + "\n")
 
 # Close the file
 models_file.close()
