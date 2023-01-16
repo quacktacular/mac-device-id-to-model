@@ -19,7 +19,7 @@ device_families = ["https://support.apple.com/en-ca/HT201634", # MacBook Pro
 for familyURL in device_families:
 	page = requests.get(familyURL)
 	soup = BeautifulSoup(page.content, "html.parser")
-	results = soup.findAll(lambda tag:tag.name=="strong" and "(" in tag.text)
+	results = soup.findAll(lambda tag:tag.name=="strong" and ("(" in tag.text or "Mac" in tag.text))
 	for model in results:
 		model_name = str(model).replace('<strong>','').replace('</strong>','').replace('<br/>','').strip()
 		section = model.find_parent('p')
