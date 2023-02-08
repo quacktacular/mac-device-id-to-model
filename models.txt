@@ -44,6 +44,8 @@ MacBook Air (11-inch, Mid 2011)|MacBookAir4,1|2011
 MacBook Air (13-inch, Late 2010)|MacBookAir3,2|2010
 MacBook Air (11-inch, Late 2010)|MacBookAir3,1|2010
 MacBook Air (Mid 2009)|MacBookAir2,1|2009
+MacBook Pro (14-inch, 2023)|Mac14,5 Mac14,9|2023
+MacBook Pro (16-inch, 2023)|Mac14,6 Mac14,10|2023
 MacBook Pro (13-inch, M2, 2022)|Mac14,7|2022
 MacBook Pro (14-inch, 2021)|MacBookPro18,3 MacBookPro18,4|2021
 MacBook Pro (16-inch, 2021)|MacBookPro18,1 MacBookPro18,2|2021
@@ -91,6 +93,8 @@ MacBook Pro (17-inch, Early 2009)|MacBookPro5,2|2009
 MacBook Pro (15-inch, Late 2008)|MacBookPro5,1|2008
 MacBook Pro (17-inch, Early 2008)|MacBookPro4,1|2008
 MacBook Pro (15-inch, Early 2008)|MacBookPro4,1|2008
+Mac mini (2023)|Mac14,3|2023
+Mac mini (2023)|Mac14,12|2023
 Mac mini (M1, 2020)|Macmini9,1|2020
 Mac mini (2018)|Macmini8,1|2018
 Mac mini (Late 2014)|Macmini7,1|2014
