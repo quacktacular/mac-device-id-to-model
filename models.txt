@@ -25,6 +25,7 @@ iMac (27-inch, Late 2009)|iMac10,1|2009
 iMac (21.5-inch, Late 2009)|iMac10,1|2009
 iMac (24-inch, Early 2009)|iMac9,1|2009
 iMac (20-inch, Early 2009)|iMac9,1|2009
+MacBook Air (15-inch, M2, 2023)|Mac14,15|2023
 MacBook Air (M2, 2022)|Mac14,2|2022
 MacBook Air (M1, 2020)|MacBookAir10,1|2020
 MacBook Air (Retina, 13-inch, 2020)|MacBookAir9,1|2020
@@ -110,6 +111,8 @@ MacBook (13-inch, Mid 2010)|MacBook7,1|2010
 MacBook (13-inch, Late 2009)|MacBook6,1|2009
 MacBook (13-inch, Mid 2009)|MacBook5,2|2009
 MacBook (13-inch, Early 2009)|MacBook5,2|2009
+Mac Pro (2023)|Mac14,8|2023
+Mac Pro (Rack, 2023)|Mac14,8|2023
 Mac Pro (2019)|MacPro7,1|2019
 Mac Pro (Rack, 2019)|MacPro7,1|2019
 Mac Pro (Late 2013)|MacPro6,1|2013
@@ -118,5 +121,7 @@ Mac Pro Server (Mid 2012)|MacPro5,1|2012
 Mac Pro (Mid 2010)|MacPro5,1|2010
 Mac Pro Server (Mid 2010)|MacPro5,1|2010
 Mac Pro (Early 2009)|MacPro4,1|2009
+Mac Studio (2023)|Mac14,13|2023
+Mac Studio (2023)|Mac14,14|2023
 Mac Studio (2022)|Mac13,1|2022
 Mac Studio (2022)|Mac13,2|2022
