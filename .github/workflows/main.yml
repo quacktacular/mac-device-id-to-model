@@ -1,0 +1,41 @@
+name: Update models nightly
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+
+jobs:
+  update_models:
+    name: Update models and create PR
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.7
+
+    - name: Install Python dependencies
+      run: pip install -r requirements.txt
+
+    - name: Run update_models.py
+      run: python update_models.py
+
+    - name: Commit and push changes
+      run: |
+        git config --local user.email "actions@github.com"
+        git config --local user.name "GitHub Actions"
+        git add .
+        git commit -m "Update models"
+        git push
+
+    - name: Create Pull Request
+      uses: peter-evans/create-pull-request@v3
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        commit-message: "Update models"
+        title: "Update models"
+        body: "This pull request updates the models nightly and creates a PR"
