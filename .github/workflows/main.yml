@@ -25,7 +25,14 @@ jobs:
     - name: Run update_models.py
       run: python update_models.py
 
+    - name: Check for changes
+      id: check_changes
+      run: |
+        git diff --exit-code || echo "There are changes."
+        echo ::set-output name=has_changes::$(if [ $? -eq 0 ]; then echo "false"; else echo "true"; fi)
+
     - name: Commit and push changes
+      if: steps.check_changes.outputs.has_changes == 'true'
       run: |
         git config --local user.email "actions@github.com"
         git config --local user.name "GitHub Actions"
@@ -34,6 +41,7 @@ jobs:
         git push
 
     - name: Create Pull Request
+      if: steps.check_changes.outputs.has_changes == 'true'
       uses: peter-evans/create-pull-request@v3
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
