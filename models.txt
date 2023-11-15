@@ -1,3 +1,5 @@
+iMac (24-inch, 2023)|Mac15,5|2023
+iMac (24-inch, 2023)|Mac15,4|2023
 iMac (24-inch, M1, 2021)|iMac21,1|2021
 iMac (24-inch, M1, 2021)|iMac21,2|2021
 iMac (Retina 5K, 27-inch, 2020)|iMac20,1 iMac20,2|2020
@@ -45,6 +47,9 @@ MacBook Air (11-inch, Mid 2011)|MacBookAir4,1|2011
 MacBook Air (13-inch, Late 2010)|MacBookAir3,2|2010
 MacBook Air (11-inch, Late 2010)|MacBookAir3,1|2010
 MacBook Air (Mid 2009)|MacBookAir2,1|2009
+MacBook Pro (14-inch, Nov 2023)|Mac15,3|2023
+MacBook Pro (14-inch, Nov 2023)|Mac15,6 Mac15,8 Mac15,10|2023
+MacBook Pro (16-inch, Nov 2023)|Mac15,7 Mac15,9 Mac15,11|2023
 MacBook Pro (14-inch, 2023)|Mac14,5 Mac14,9|2023
 MacBook Pro (16-inch, 2023)|Mac14,6 Mac14,10|2023
 MacBook Pro (13-inch, M2, 2022)|Mac14,7|2022
