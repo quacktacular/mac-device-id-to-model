@@ -1,0 +1,16 @@
+# Apple Support "Identify your Mac" articles
+device_families:
+  - https://support.apple.com/en-us/108054  # iMac
+  - https://support.apple.com/en-us/102869  # MacBook Air
+  - https://support.apple.com/en-us/108052  # MacBook Pro
+  - https://support.apple.com/en-us/102852  # Mac mini
+  - https://support.apple.com/en-us/103257  # MacBook
+  - https://support.apple.com/en-us/102887  # Mac Pro
+  - https://support.apple.com/en-us/102231  # Mac Studio
+
+# Models Apple hasn't published an identify page for yet
+manual_entries:
+  - name: MacBook Neo (13-inch, A18 Pro)
+    identifiers: Mac17,5
+    year: "2026"
+    part_numbers: MHFA4xx/A MHFH4xx/A MHFD4xx/A MHFF4xx/A MHFC4xx/A MHFJ4xx/A MHFE4xx/A MHFG4xx/A

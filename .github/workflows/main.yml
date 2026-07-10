@@ -2,49 +2,58 @@ name: Update models nightly
 
 on:
   schedule:
-    - cron: "0 0 * * *"
+    - cron: "0 0 * * *"  # midnight UTC
   workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
 
 jobs:
   update_models:
-    name: Update models and create PR
+    name: Scrape models and open PR
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v4
 
-    - name: Set up Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: 3.7
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
 
-    - name: Install Python dependencies
-      run: pip install -r requirements.txt
+      - name: Install dependencies
+        run: pip install -r requirements.txt
 
-    - name: Run update_models.py
-      run: python update_models.py
+      - name: Scrape Apple Support pages
+        run: python update_models.py -f txt -f json
 
-    - name: Check for changes
-      id: check_changes
-      run: |
-        git diff --exit-code || echo "There are changes."
-        echo ::set-output name=has_changes::$(if [ $? -eq 0 ]; then echo "false"; else echo "true"; fi)
+      - name: Create or update pull request
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: update-models
+        run: |
+          if git diff --quiet -- models.txt models.json; then
+            echo "No changes to models.txt or models.json"
+            exit 0
+          fi
 
-    - name: Commit and push changes
-      if: steps.check_changes.outputs.has_changes == 'true'
-      run: |
-        git config --local user.email "actions@github.com"
-        git config --local user.name "GitHub Actions"
-        git add .
-        git commit -m "Update models"
-        git push
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-    - name: Create Pull Request
-      if: steps.check_changes.outputs.has_changes == 'true'
-      uses: peter-evans/create-pull-request@v3
-      with:
-        token: ${{ secrets.GITHUB_TOKEN }}
-        commit-message: "Update models"
-        title: "Update models"
-        body: "This pull request updates the models nightly and creates a PR"
+          git checkout -B "$BRANCH"
+          git add models.txt models.json
+          git commit -m "Update models"
+          # Bot owns this branch; force is fine so an open PR picks up new scrapes.
+          git push --force origin "HEAD:$BRANCH"
+
+          if gh pr list --head "$BRANCH" --state open --json number --jq 'length' | grep -qx 0; then
+            gh pr create \
+              --base "${{ github.event.repository.default_branch }}" \
+              --head "$BRANCH" \
+              --title "Update models" \
+              --body "Automated refresh of \`models.txt\` and \`models.json\` from Apple Support identify pages."
+          else
+            echo "Pull request for $BRANCH already exists; branch updated in place"
+          fi

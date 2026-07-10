@@ -48,7 +48,18 @@ echo $DEVICE_YEAR
 
 ## Where does the data come from?
 
-It's scraped from Apple's Support site. When new Mac models are released `update_models.py` can be run to create a new list. These articles are quite old, and if Apple makes breaking changes to the HTML the Python script might need to be adjusted a bit.
+It's scraped from Apple's Support identify pages (URLs in `config.yaml`). Run:
+
+```
+pip install -r requirements.txt
+python update_models.py                     # models.txt (default)
+python update_models.py -f txt -f json      # both committed outputs
+python update_models.py -f json -o out.json
+```
+
+Formats: `txt` (default), `csv`, `yaml`, `json` (`-f` is repeatable). Use `-o` for a single-format output path. Manual entries (e.g. MacBook Neo, until Apple publishes an identify page) also live in `config.yaml`.
+
+A nightly GitHub Action re-scrapes and opens a PR when `models.txt` or `models.json` changes.
 
 ## My model is missing!
 
